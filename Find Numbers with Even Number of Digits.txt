@@ -1,0 +1,13 @@
+Find Numbers with Even Number of Digits
+
+solution - > in Javascript 
+var findNumbers = function(nums) {
+    let numtostr=[];
+    let numslen = [];
+    for(let i=0;i<nums.length;i++){
+        numtostr = nums[i].toString().split('').length;  
+        numslen.push(numtostr);
+    }
+    let countoarr = numslen.filter( item => item%2 === 0 ).length
+    return countoarr;
+};
